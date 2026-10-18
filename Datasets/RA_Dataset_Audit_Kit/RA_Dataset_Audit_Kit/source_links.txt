@@ -1,0 +1,14 @@
+Official dataset:
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VM4OR3
+
+Data paper:
+https://doi.org/10.1016/j.dib.2025.111623
+
+PeerJ paper using same dataset:
+https://doi.org/10.7717/peerj-cs.3096
+
+BMC Rheumatology paper using same dataset:
+https://doi.org/10.1186/s41927-025-00607-7
+
+Indian imaging research context (different modality/cohort):
+https://doi.org/10.3389/fmed.2023.1280462
