@@ -1,0 +1,208 @@
+{
+  "validation_numeric_bounds": [
+    {
+      "Feature": "Age",
+      "Recorded Min": 20.0,
+      "Recorded Max": 80.0,
+      "Physiological Bound": "[0, 120]",
+      "Violations (Below/Above)": "0 / 0",
+      "Zero Count": 0,
+      "Quality Status": "PASSED (Clinically Plausible)"
+    },
+    {
+      "Feature": "ESR",
+      "Recorded Min": 0.0,
+      "Recorded Max": 49.0,
+      "Physiological Bound": "[0.0, 150.0]",
+      "Violations (Below/Above)": "0 / 0",
+      "Zero Count": 260,
+      "Quality Status": "PASSED (Clinically Plausible)"
+    },
+    {
+      "Feature": "CRP",
+      "Recorded Min": 0.1,
+      "Recorded Max": 30.0,
+      "Physiological Bound": "[0.0, 300.0]",
+      "Violations (Below/Above)": "0 / 0",
+      "Zero Count": 0,
+      "Quality Status": "PASSED (Clinically Plausible)"
+    },
+    {
+      "Feature": "RF",
+      "Recorded Min": 0.0,
+      "Recorded Max": 40.0,
+      "Physiological Bound": "[0.0, 500.0]",
+      "Violations (Below/Above)": "0 / 0",
+      "Zero Count": 11,
+      "Quality Status": "PASSED (Clinically Plausible)"
+    },
+    {
+      "Feature": "Anti-CCP",
+      "Recorded Min": 0.0,
+      "Recorded Max": 40.0,
+      "Physiological Bound": "[0.0, 500.0]",
+      "Violations (Below/Above)": "0 / 0",
+      "Zero Count": 12,
+      "Quality Status": "PASSED (Clinically Plausible)"
+    },
+    {
+      "Feature": "C3",
+      "Recorded Min": 50.0,
+      "Recorded Max": 205.0,
+      "Physiological Bound": "[10.0, 400.0]",
+      "Violations (Below/Above)": "0 / 0",
+      "Zero Count": 0,
+      "Quality Status": "PASSED (Clinically Plausible)"
+    },
+    {
+      "Feature": "C4",
+      "Recorded Min": 5.0,
+      "Recorded Max": 74.0,
+      "Physiological Bound": "[1.0, 150.0]",
+      "Violations (Below/Above)": "0 / 0",
+      "Zero Count": 0,
+      "Quality Status": "PASSED (Clinically Plausible)"
+    }
+  ],
+  "validation_categorical_domains": [
+    {
+      "Feature": "Gender",
+      "Unique Non-Null Count": 2,
+      "Domain Observed": [
+        "Female",
+        "Male"
+      ],
+      "Unexpected Tokens": [],
+      "Quality Status": "PASSED (Conforms to Domain)"
+    },
+    {
+      "Feature": "HLA-B27",
+      "Unique Non-Null Count": 2,
+      "Domain Observed": [
+        "Negative",
+        "Positive"
+      ],
+      "Unexpected Tokens": [],
+      "Quality Status": "PASSED (Conforms to Domain)"
+    },
+    {
+      "Feature": "ANA",
+      "Unique Non-Null Count": 2,
+      "Domain Observed": [
+        "Negative",
+        "Positive"
+      ],
+      "Unexpected Tokens": [],
+      "Quality Status": "PASSED (Conforms to Domain)"
+    },
+    {
+      "Feature": "Anti-Ro",
+      "Unique Non-Null Count": 2,
+      "Domain Observed": [
+        "Negative",
+        "Positive"
+      ],
+      "Unexpected Tokens": [],
+      "Quality Status": "PASSED (Conforms to Domain)"
+    },
+    {
+      "Feature": "Anti-La",
+      "Unique Non-Null Count": 2,
+      "Domain Observed": [
+        "Negative",
+        "Positive"
+      ],
+      "Unexpected Tokens": [],
+      "Quality Status": "PASSED (Conforms to Domain)"
+    },
+    {
+      "Feature": "Anti-dsDNA",
+      "Unique Non-Null Count": 2,
+      "Domain Observed": [
+        "Negative",
+        "Positive"
+      ],
+      "Unexpected Tokens": [],
+      "Quality Status": "PASSED (Conforms to Domain)"
+    },
+    {
+      "Feature": "Anti-Sm",
+      "Unique Non-Null Count": 2,
+      "Domain Observed": [
+        "Negative",
+        "Positive"
+      ],
+      "Unexpected Tokens": [],
+      "Quality Status": "PASSED (Conforms to Domain)"
+    },
+    {
+      "Feature": "Disease",
+      "Unique Non-Null Count": 7,
+      "Domain Observed": [
+        "Rheumatoid Arthritis",
+        "Reactive Arthritis",
+        "Normal",
+        "Systemic Lupus Erythematosus",
+        "Sj\u00f6gren's Syndrome",
+        "Ankylosing Spondylitis",
+        "Psoriatic Arthritis"
+      ],
+      "Unexpected Tokens": [],
+      "Quality Status": "PASSED (Conforms to Domain)"
+    }
+  ],
+  "co_missingness_summary": {
+    "anti_dna_anti_sm_corr": -0.017396062694525403,
+    "anti_ro_anti_la_corr": -0.008475258022278503
+  },
+  "decision_log": [
+    {
+      "Decision_ID": "D01",
+      "Target_Scope": "All Columns",
+      "Issue_Identified": "Absence of unique patient identifier (MRN/Patient ID)",
+      "Decision_Made": "Generate deterministic 0-indexed integer surrogate key 'patient_row_id'",
+      "Clinical_Rationale": "Enables reproducible tracking, split verification, and auditability without fabricating patient identifiers.",
+      "Status": "Adopted"
+    },
+    {
+      "Decision_ID": "D02",
+      "Target_Scope": "Raw Excel Workbook",
+      "Issue_Identified": "Need for audit trail and immutability",
+      "Decision_Made": "Never overwrite or alter data/raw/Rheumatic and Autoimmune Disease Dataset.xlsx",
+      "Clinical_Rationale": "Maintains raw data integrity for external audit and reproducible validation.",
+      "Status": "Enforced"
+    },
+    {
+      "Decision_ID": "D03",
+      "Target_Scope": "Missing Laboratory Values",
+      "Issue_Identified": "Laboratory tests have between 9% and 43% missingness",
+      "Decision_Made": "Preserve all genuine NaN values in processed dataset; strictly forbid dropna() and global pre-imputation",
+      "Clinical_Rationale": "Dropping rows would eliminate 96.3% of records. Imputing negative/zero introduces severe false clinical assumptions.",
+      "Status": "Enforced"
+    },
+    {
+      "Decision_ID": "D04",
+      "Target_Scope": "Categorical Strings",
+      "Issue_Identified": "Potential invisible whitespace in string fields",
+      "Decision_Made": "Apply safe whitespace stripping (.strip()) on non-null object values",
+      "Clinical_Rationale": "Prevents subtle key mismatches without corrupting genuine missing values.",
+      "Status": "Implemented"
+    },
+    {
+      "Decision_ID": "D05",
+      "Target_Scope": "Original Disease Column",
+      "Issue_Identified": "Multi-class diagnosis column will cause target leakage if passed to model features",
+      "Decision_Made": "Retain 'Disease' in processed cohort for auditing, but exclude programmatically from model input X",
+      "Clinical_Rationale": "Guarantees zero target leakage while preserving cohort traceability for error analysis.",
+      "Status": "Enforced"
+    },
+    {
+      "Decision_ID": "D06",
+      "Target_Scope": "Row Ordering Anomaly",
+      "Issue_Identified": "Raw records are strictly grouped into 7 contiguous diagnosis blocks",
+      "Decision_Made": "Mandate stratified random splitting with fixed random seed (seed=42) and shuffling",
+      "Clinical_Rationale": "Prevents catastrophic split bias where test sets would contain only non-RA diagnoses.",
+      "Status": "Enforced"
+    }
+  ]
+}

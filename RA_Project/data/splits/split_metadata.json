@@ -1,0 +1,50 @@
+{
+  "creation_timestamp": "2026-10-18T18:09:10.382181+00:00",
+  "random_state": 42,
+  "test_size_fraction": 0.2,
+  "stratify_column": "Target_RA",
+  "shuffle": true,
+  "total_cohort_records": 12085,
+  "train_split": {
+    "record_count": 9668,
+    "fraction": 0.8,
+    "target_distribution": {
+      "positive_RA_count": 2278,
+      "positive_RA_ratio": 0.2356226727347952,
+      "negative_non_RA_count": 7390,
+      "negative_non_RA_ratio": 0.7643773272652048
+    }
+  },
+  "test_split": {
+    "record_count": 2417,
+    "fraction": 0.2,
+    "target_distribution": {
+      "positive_RA_count": 570,
+      "positive_RA_ratio": 0.23582954075299958,
+      "negative_non_RA_count": 1847,
+      "negative_non_RA_ratio": 0.7641704592470004
+    }
+  },
+  "zero_overlap_confirmed": true,
+  "feature_columns_count": 14,
+  "feature_columns": [
+    "Age",
+    "Gender",
+    "ESR",
+    "CRP",
+    "RF",
+    "Anti-CCP",
+    "HLA-B27",
+    "ANA",
+    "Anti-Ro",
+    "Anti-La",
+    "Anti-dsDNA",
+    "Anti-Sm",
+    "C3",
+    "C4"
+  ],
+  "traceability_columns": [
+    "patient_row_id",
+    "Disease"
+  ]
+}

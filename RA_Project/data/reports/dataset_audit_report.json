@@ -1,0 +1,485 @@
+{
+  "dataset_shape": {
+    "rows": 12085,
+    "columns": 15
+  },
+  "columns_audit": {
+    "Age": {
+      "dtype": "int64",
+      "missing_count": 0,
+      "missing_percentage": 0.0,
+      "non_null_count": 12085
+    },
+    "Gender": {
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percentage": 0.0,
+      "non_null_count": 12085
+    },
+    "ESR": {
+      "dtype": "float64",
+      "missing_count": 1088,
+      "missing_percentage": 9.0,
+      "non_null_count": 10997
+    },
+    "CRP": {
+      "dtype": "float64",
+      "missing_count": 2417,
+      "missing_percentage": 20.0,
+      "non_null_count": 9668
+    },
+    "RF": {
+      "dtype": "float64",
+      "missing_count": 1329,
+      "missing_percentage": 11.0,
+      "non_null_count": 10756
+    },
+    "Anti-CCP": {
+      "dtype": "float64",
+      "missing_count": 3263,
+      "missing_percentage": 27.0,
+      "non_null_count": 8822
+    },
+    "HLA-B27": {
+      "dtype": "object",
+      "missing_count": 1934,
+      "missing_percentage": 16.0,
+      "non_null_count": 10151
+    },
+    "ANA": {
+      "dtype": "object",
+      "missing_count": 3746,
+      "missing_percentage": 31.0,
+      "non_null_count": 8339
+    },
+    "Anti-Ro": {
+      "dtype": "object",
+      "missing_count": 2900,
+      "missing_percentage": 24.0,
+      "non_null_count": 9185
+    },
+    "Anti-La": {
+      "dtype": "object",
+      "missing_count": 3021,
+      "missing_percentage": 25.0,
+      "non_null_count": 9064
+    },
+    "Anti-dsDNA": {
+      "dtype": "object",
+      "missing_count": 4713,
+      "missing_percentage": 39.0,
+      "non_null_count": 7372
+    },
+    "Anti-Sm": {
+      "dtype": "object",
+      "missing_count": 5197,
+      "missing_percentage": 43.0,
+      "non_null_count": 6888
+    },
+    "C3": {
+      "dtype": "float64",
+      "missing_count": 1692,
+      "missing_percentage": 14.0,
+      "non_null_count": 10393
+    },
+    "C4": {
+      "dtype": "float64",
+      "missing_count": 2054,
+      "missing_percentage": 17.0,
+      "non_null_count": 10031
+    },
+    "Disease": {
+      "dtype": "object",
+      "missing_count": 0,
+      "missing_percentage": 0.0,
+      "non_null_count": 12085
+    }
+  },
+  "exact_duplicates": 0,
+  "feature_duplicates_excluding_disease": 0,
+  "numeric_summary": {
+    "Age": {
+      "count": 12085,
+      "mean": 49.9058,
+      "std": 17.65,
+      "min": 20.0,
+      "q25": 35.0,
+      "median": 50.0,
+      "q75": 65.0,
+      "max": 80.0,
+      "zero_count": 0,
+      "negative_count": 0,
+      "outlier_count_iqr": 0,
+      "outlier_pct_iqr": 0.0
+    },
+    "ESR": {
+      "count": 10997,
+      "mean": 24.2143,
+      "std": 14.3683,
+      "min": 0.0,
+      "q25": 10.0,
+      "median": 28.0,
+      "q75": 36.0,
+      "max": 49.0,
+      "zero_count": 260,
+      "negative_count": 0,
+      "outlier_count_iqr": 0,
+      "outlier_pct_iqr": 0.0
+    },
+    "CRP": {
+      "count": 9668,
+      "mean": 13.325,
+      "std": 10.393,
+      "min": 0.1,
+      "q25": 1.9,
+      "median": 15.6,
+      "q75": 22.6,
+      "max": 30.0,
+      "zero_count": 0,
+      "negative_count": 0,
+      "outlier_count_iqr": 0,
+      "outlier_pct_iqr": 0.0
+    },
+    "RF": {
+      "count": 10756,
+      "mean": 19.6852,
+      "std": 11.5176,
+      "min": 0.0,
+      "q25": 9.7,
+      "median": 19.2,
+      "q75": 29.7,
+      "max": 40.0,
+      "zero_count": 11,
+      "negative_count": 0,
+      "outlier_count_iqr": 0,
+      "outlier_pct_iqr": 0.0
+    },
+    "Anti-CCP": {
+      "count": 8822,
+      "mean": 19.5792,
+      "std": 11.6017,
+      "min": 0.0,
+      "q25": 9.5,
+      "median": 19.0,
+      "q75": 29.6,
+      "max": 40.0,
+      "zero_count": 12,
+      "negative_count": 0,
+      "outlier_count_iqr": 0,
+      "outlier_pct_iqr": 0.0
+    },
+    "C3": {
+      "count": 10393,
+      "mean": 131.9103,
+      "std": 36.4259,
+      "min": 50.0,
+      "q25": 105.0,
+      "median": 133.0,
+      "q75": 161.0,
+      "max": 205.0,
+      "zero_count": 0,
+      "negative_count": 0,
+      "outlier_count_iqr": 0,
+      "outlier_pct_iqr": 0.0
+    },
+    "C4": {
+      "count": 10031,
+      "mean": 38.1785,
+      "std": 20.0502,
+      "min": 5.0,
+      "q25": 21.0,
+      "median": 38.0,
+      "q75": 55.0,
+      "max": 74.0,
+      "zero_count": 0,
+      "negative_count": 0,
+      "outlier_count_iqr": 0,
+      "outlier_pct_iqr": 0.0
+    }
+  },
+  "categorical_summary": {
+    "Gender": {
+      "unique_count": 2,
+      "value_counts": {
+        "Male": 6151,
+        "Female": 5934
+      },
+      "whitespace_issues_detected": false
+    },
+    "HLA-B27": {
+      "unique_count": 3,
+      "value_counts": {
+        "Positive": 6231,
+        "Negative": 3920,
+        "NaN": 1934
+      },
+      "whitespace_issues_detected": false
+    },
+    "ANA": {
+      "unique_count": 3,
+      "value_counts": {
+        "Positive": 5248,
+        "NaN": 3746,
+        "Negative": 3091
+      },
+      "whitespace_issues_detected": false
+    },
+    "Anti-Ro": {
+      "unique_count": 3,
+      "value_counts": {
+        "Positive": 5292,
+        "Negative": 3893,
+        "NaN": 2900
+      },
+      "whitespace_issues_detected": false
+    },
+    "Anti-La": {
+      "unique_count": 3,
+      "value_counts": {
+        "Positive": 5305,
+        "Negative": 3759,
+        "NaN": 3021
+      },
+      "whitespace_issues_detected": false
+    },
+    "Anti-dsDNA": {
+      "unique_count": 3,
+      "value_counts": {
+        "NaN": 4713,
+        "Positive": 4077,
+        "Negative": 3295
+      },
+      "whitespace_issues_detected": false
+    },
+    "Anti-Sm": {
+      "unique_count": 3,
+      "value_counts": {
+        "NaN": 5197,
+        "Positive": 3759,
+        "Negative": 3129
+      },
+      "whitespace_issues_detected": false
+    },
+    "Disease": {
+      "unique_count": 7,
+      "value_counts": {
+        "Rheumatoid Arthritis": 2848,
+        "Ankylosing Spondylitis": 2127,
+        "Sj\u00f6gren's Syndrome": 1852,
+        "Psoriatic Arthritis": 1783,
+        "Normal": 1604,
+        "Systemic Lupus Erythematosus": 1355,
+        "Reactive Arthritis": 516
+      },
+      "whitespace_issues_detected": false
+    }
+  },
+  "diagnosis_distribution": {
+    "Rheumatoid Arthritis": {
+      "count": 2848,
+      "percentage": 23.57
+    },
+    "Ankylosing Spondylitis": {
+      "count": 2127,
+      "percentage": 17.6
+    },
+    "Sj\u00f6gren's Syndrome": {
+      "count": 1852,
+      "percentage": 15.32
+    },
+    "Psoriatic Arthritis": {
+      "count": 1783,
+      "percentage": 14.75
+    },
+    "Normal": {
+      "count": 1604,
+      "percentage": 13.27
+    },
+    "Systemic Lupus Erythematosus": {
+      "count": 1355,
+      "percentage": 11.21
+    },
+    "Reactive Arthritis": {
+      "count": 516,
+      "percentage": 4.27
+    }
+  },
+  "diagnosis_blocks": [
+    {
+      "diagnosis": "Rheumatoid Arthritis",
+      "start_index": 0,
+      "end_index": 2847,
+      "block_length": 2848
+    },
+    {
+      "diagnosis": "Reactive Arthritis",
+      "start_index": 2848,
+      "end_index": 3363,
+      "block_length": 516
+    },
+    {
+      "diagnosis": "Ankylosing Spondylitis",
+      "start_index": 3364,
+      "end_index": 5490,
+      "block_length": 2127
+    },
+    {
+      "diagnosis": "Sj\u00f6gren's Syndrome",
+      "start_index": 5491,
+      "end_index": 7342,
+      "block_length": 1852
+    },
+    {
+      "diagnosis": "Systemic Lupus Erythematosus",
+      "start_index": 7343,
+      "end_index": 8697,
+      "block_length": 1355
+    },
+    {
+      "diagnosis": "Normal",
+      "start_index": 8698,
+      "end_index": 10301,
+      "block_length": 1604
+    },
+    {
+      "diagnosis": "Psoriatic Arthritis",
+      "start_index": 10302,
+      "end_index": 12084,
+      "block_length": 1783
+    }
+  ],
+  "is_diagnosis_block_ordered": true,
+  "missing_labs_per_row_distribution": {
+    "0": 452,
+    "1": 1796,
+    "2": 3204,
+    "3": 3191,
+    "4": 2127,
+    "5": 919,
+    "6": 313,
+    "7": 69,
+    "8": 13,
+    "9": 1
+  },
+  "missingness_by_diagnosis": {
+    "Ankylosing Spondylitis": {
+      "Age": 0,
+      "Gender": 0,
+      "ESR": 191,
+      "CRP": 433,
+      "RF": 215,
+      "Anti-CCP": 539,
+      "HLA-B27": 327,
+      "ANA": 658,
+      "Anti-Ro": 527,
+      "Anti-La": 529,
+      "Anti-dsDNA": 820,
+      "Anti-Sm": 899,
+      "C3": 314,
+      "C4": 342
+    },
+    "Normal": {
+      "Age": 0,
+      "Gender": 0,
+      "ESR": 150,
+      "CRP": 322,
+      "RF": 173,
+      "Anti-CCP": 424,
+      "HLA-B27": 235,
+      "ANA": 486,
+      "Anti-Ro": 377,
+      "Anti-La": 375,
+      "Anti-dsDNA": 641,
+      "Anti-Sm": 697,
+      "C3": 233,
+      "C4": 267
+    },
+    "Psoriatic Arthritis": {
+      "Age": 0,
+      "Gender": 0,
+      "ESR": 168,
+      "CRP": 340,
+      "RF": 219,
+      "Anti-CCP": 478,
+      "HLA-B27": 296,
+      "ANA": 575,
+      "Anti-Ro": 403,
+      "Anti-La": 435,
+      "Anti-dsDNA": 704,
+      "Anti-Sm": 749,
+      "C3": 232,
+      "C4": 298
+    },
+    "Reactive Arthritis": {
+      "Age": 0,
+      "Gender": 0,
+      "ESR": 46,
+      "CRP": 105,
+      "RF": 81,
+      "Anti-CCP": 158,
+      "HLA-B27": 76,
+      "ANA": 166,
+      "Anti-Ro": 130,
+      "Anti-La": 122,
+      "Anti-dsDNA": 200,
+      "Anti-Sm": 225,
+      "C3": 73,
+      "C4": 76
+    },
+    "Rheumatoid Arthritis": {
+      "Age": 0,
+      "Gender": 0,
+      "ESR": 251,
+      "CRP": 579,
+      "RF": 303,
+      "Anti-CCP": 807,
+      "HLA-B27": 469,
+      "ANA": 866,
+      "Anti-Ro": 680,
+      "Anti-La": 745,
+      "Anti-dsDNA": 1105,
+      "Anti-Sm": 1246,
+      "C3": 387,
+      "C4": 510
+    },
+    "Sj\u00f6gren's Syndrome": {
+      "Age": 0,
+      "Gender": 0,
+      "ESR": 159,
+      "CRP": 373,
+      "RF": 203,
+      "Anti-CCP": 516,
+      "HLA-B27": 311,
+      "ANA": 563,
+      "Anti-Ro": 448,
+      "Anti-La": 473,
+      "Anti-dsDNA": 722,
+      "Anti-Sm": 791,
+      "C3": 262,
+      "C4": 328
+    },
+    "Systemic Lupus Erythematosus": {
+      "Age": 0,
+      "Gender": 0,
+      "ESR": 123,
+      "CRP": 265,
+      "RF": 135,
+      "Anti-CCP": 341,
+      "HLA-B27": 220,
+      "ANA": 432,
+      "Anti-Ro": 335,
+      "Anti-La": 342,
+      "Anti-dsDNA": 521,
+      "Anti-Sm": 590,
+      "C3": 191,
+      "C4": 233
+    }
+  },
+  "limitations": [
+    "Absence of explicit unique patient identifier (Patient ID / MRN); rows are currently identifiable only by positional index.",
+    "Severe row-ordering artifact: records are strictly segregated into 7 monolithic diagnosis blocks in the raw workbook.",
+    "High missingness in specialized laboratory tests (Anti-Sm: 43.0%, Anti-dsDNA: 39.0%, ANA: 31.0%, Anti-CCP: 27.0%, CRP: 20.0%).",
+    "Retrospective cross-sectional cohort: labels reflect recorded clinical diagnoses, not prospective future-onset disease prediction.",
+    "Absence of longitudinal follow-up, symptom duration, physical joint examination scores (e.g., DAS28, tender/swollen joint counts), and imaging (X-ray/MRI)."
+  ]
+}

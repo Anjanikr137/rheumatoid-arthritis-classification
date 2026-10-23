@@ -1,0 +1,22 @@
+# Core Data Processing and Analysis
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+
+# Machine Learning & Preprocessing
+scikit-learn>=1.3.0
+joblib>=1.3.0
+xgboost>=2.0.0
+
+# Visualization & Reporting
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Jupyter Notebook Environment & Tooling
+jupyter>=1.0.0
+ipykernel>=6.20.0
+nbconvert>=7.0.0
+nbformat>=5.9.0
+
+# Optional Neural Network Framework (for Notebook 08 - ANN)
+# tensorflow>=2.14.0
