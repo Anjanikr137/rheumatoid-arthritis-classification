@@ -33,8 +33,9 @@ Four separate machine learning models will be developed in dedicated notebooks b
 | :--- | :--- | :--- | :--- | :--- |
 | [`05_logistic_regression.ipynb`](file:///d:/PRJ%201%20Sem%205/RA_Project/notebooks/05_logistic_regression.ipynb) | Regularized Logistic Regression (L1/L2/ElasticNet) | **Teammate 1 (Ali Zamaan)** | `models/logistic_regression/` | `.joblib` |
 | [`06_random_forest.ipynb`](file:///d:/PRJ%201%20Sem%205/RA_Project/notebooks/06_random_forest.ipynb) | Random Forest Ensemble | **Teammate 2 (Nakshtr Gupta)** | `models/random_forest/` | `.joblib` |
-| [`07_xgboost.ipynb`](file:///d:/PRJ%201%20Sem%205/RA_Project/notebooks/07_xgboost.ipynb) | Extreme Gradient Boosting (XGBoost) | **Anjani Kumar (Me)** *(with team input)* | `models/xgboost/` | `.joblib` / JSON |
-| [`08_ann.ipynb`](file:///d:/PRJ%201%20Sem%205/RA_Project/notebooks/08_ann.ipynb) | Artificial Neural Network (MLP / Deep Feedforward) | **Anjani Kumar (Me)** | `models/ann/` | `.keras` + `.joblib` |
+| [`07_xgboost.ipynb`](file:///d:/PRJ%201%20Sem%205/RA_Project/notebooks/07_xgboost.ipynb) | Extreme Gradient Boosting (XGBoost) | **Anjani Kumar** | `models/xgboost/` | `.joblib` / JSON |
+| [`08_ann.ipynb`](file:///d:/PRJ%201%20Sem%205/RA_Project/notebooks/08_ann.ipynb) | Artificial Neural Network (MLP / Deep Feedforward) | **Anjani Kumar
+** | `models/ann/` | `.keras` + `.joblib` |
 | [`evaluation/model_comparison.ipynb`](file:///d:/PRJ%201%20Sem%205/RA_Project/evaluation/model_comparison.ipynb) | Multi-Model Benchmark & Evaluation | **All Team Members** | `evaluation/results/` | `.csv` / plots |
 
 ---
