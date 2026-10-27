@@ -1,0 +1,28 @@
+{
+  "at_selected_threshold": {
+    "Threshold": 0.46,
+    "Accuracy": 0.9346297062474141,
+    "Precision": 0.8065476190476191,
+    "Recall_Sensitivity": 0.9508771929824561,
+    "Specificity": 0.9296155928532756,
+    "F1_Score": 0.8727858293075684,
+    "ROC_AUC": 0.9849713618100476,
+    "PR_AUC": 0.9510931042186394,
+    "TP": 542,
+    "FP": 130,
+    "TN": 1717,
+    "FN": 28,
+    "Support_RA": 570,
+    "Support_Non_RA": 1847
+  },
+  "at_default_threshold": {
+    "Threshold": 0.5,
+    "Accuracy": 0.9338022341745966,
+    "Precision": 0.8173374613003096,
+    "Recall_Sensitivity": 0.9263157894736842,
+    "Specificity": 0.9361126150514347,
+    "F1_Score": 0.868421052631579,
+    "ROC_AUC": 0.9849713618100476,
+    "PR_AUC": 0.9510931042186394
+  }
+}
