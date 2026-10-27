@@ -1,0 +1,169 @@
+{
+  "model_name": "Artificial Neural Network (ANN) Classifier",
+  "architecture": "Candidate A (Compact)",
+  "layers": [
+    {
+      "type": "Dense",
+      "units": 32,
+      "activation": "relu"
+    },
+    {
+      "type": "Dropout",
+      "rate": 0.2
+    },
+    {
+      "type": "Dense",
+      "units": 16,
+      "activation": "relu"
+    },
+    {
+      "type": "Dense",
+      "units": 1,
+      "activation": "sigmoid"
+    }
+  ],
+  "random_seed": 42,
+  "input_features_count": 14,
+  "input_features": [
+    "Age",
+    "Gender",
+    "ESR",
+    "CRP",
+    "RF",
+    "Anti-CCP",
+    "HLA-B27",
+    "ANA",
+    "Anti-Ro",
+    "Anti-La",
+    "Anti-dsDNA",
+    "Anti-Sm",
+    "C3",
+    "C4"
+  ],
+  "transformed_features_count": 27,
+  "transformed_feature_names": [
+    "num__Age",
+    "num__ESR",
+    "num__CRP",
+    "num__RF",
+    "num__Anti-CCP",
+    "num__C3",
+    "num__C4",
+    "cat__Gender_Female",
+    "cat__Gender_Male",
+    "cat__HLA-B27_Missing",
+    "cat__HLA-B27_Negative",
+    "cat__HLA-B27_Positive",
+    "cat__ANA_Missing",
+    "cat__ANA_Negative",
+    "cat__ANA_Positive",
+    "cat__Anti-Ro_Missing",
+    "cat__Anti-Ro_Negative",
+    "cat__Anti-Ro_Positive",
+    "cat__Anti-La_Missing",
+    "cat__Anti-La_Negative",
+    "cat__Anti-La_Positive",
+    "cat__Anti-dsDNA_Missing",
+    "cat__Anti-dsDNA_Negative",
+    "cat__Anti-dsDNA_Positive",
+    "cat__Anti-Sm_Missing",
+    "cat__Anti-Sm_Negative",
+    "cat__Anti-Sm_Positive"
+  ],
+  "preprocessing": {
+    "numeric_features": [
+      "Age",
+      "ESR",
+      "CRP",
+      "RF",
+      "Anti-CCP",
+      "C3",
+      "C4"
+    ],
+    "numeric_strategy": "SimpleImputer(median) + StandardScaler",
+    "categorical_features": [
+      "Gender",
+      "HLA-B27",
+      "ANA",
+      "Anti-Ro",
+      "Anti-La",
+      "Anti-dsDNA",
+      "Anti-Sm"
+    ],
+    "categorical_strategy": "SimpleImputer('Missing') + OneHotEncoder(handle_unknown='ignore')"
+  },
+  "training_configuration": {
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "loss": "binary_crossentropy",
+    "batch_size": 32,
+    "max_epochs": 150,
+    "early_stopping_patience": 15,
+    "reduce_lr_patience": 5,
+    "reduce_lr_factor": 0.5,
+    "best_epoch": 14,
+    "total_epochs": 29
+  },
+  "decision_threshold": {
+    "selected": 0.39,
+    "default": 0.5,
+    "rationale": "Maximized validation F1 score (0.8443) while achieving >90% sensitivity on validation cohort."
+  },
+  "validation_metrics": {
+    "Architecture": "Candidate A (Compact)",
+    "Best_Epoch": 14,
+    "Total_Epochs": 29,
+    "Training_Time_s": 27.72,
+    "Val_Loss": 0.1548,
+    "Val_PR_AUC": 0.9269,
+    "Val_ROC_AUC": 0.977,
+    "Val_F1": 0.8332,
+    "Val_Recall": 0.8706,
+    "Val_Precision": 0.7988,
+    "Val_Specificity": 0.9323,
+    "Val_Accuracy": 0.9178
+  },
+  "test_metrics": {
+    "at_selected_threshold": {
+      "Threshold": 0.39,
+      "Accuracy": 0.9164253206454283,
+      "Precision": 0.7729970326409495,
+      "Recall_Sensitivity": 0.9140350877192982,
+      "Specificity": 0.9171629669734704,
+      "F1_Score": 0.837620578778135,
+      "ROC_AUC": 0.9767702960704414,
+      "PR_AUC": 0.9252037331152884,
+      "TP": 521,
+      "FP": 153,
+      "TN": 1694,
+      "FN": 49,
+      "Support_RA": 570,
+      "Support_Non_RA": 1847
+    },
+    "at_default_threshold": {
+      "Threshold": 0.5,
+      "Accuracy": 0.9201489449731072,
+      "Precision": 0.8055105348460292,
+      "Recall_Sensitivity": 0.8719298245614036,
+      "Specificity": 0.9350297780184083,
+      "F1_Score": 0.8374052232518955,
+      "ROC_AUC": 0.9767702960704414,
+      "PR_AUC": 0.9252037331152884,
+      "TP": 497,
+      "FP": 120,
+      "TN": 1727,
+      "FN": 73,
+      "Support_RA": 570,
+      "Support_Non_RA": 1847
+    }
+  },
+  "dependencies": {
+    "python": "3.13.5",
+    "tensorflow": "2.21.0",
+    "keras": "3.15.0",
+    "scikit_learn": "2.3.0",
+    "joblib": "1.5.3",
+    "pandas": "2.3.0",
+    "numpy": "2.3.0"
+  }
+}
